@@ -1,0 +1,46 @@
+
+# If not language specified, default English will be used.
+
+# System
+system.title=System
+system.error=System error: %1
+system.successResult=Result: %1
+
+# Mirai
+mirai.errorFormat=Unexpected module format error!
+mirai.nameExist=Module name conflicts with another module!
+mirai.notFoundLanguage=Module %1 doesn't support your language
+mirai.notFoundPackage=Cannot find package %1 for module %2, installing...
+mirai.cantInstallPackage=Cannot install package %1 for module %2, error: %3
+mirai.loadedPackage=Successfully loaded all packages for module %1
+mirai.loadedConfig=Successfully loaded config for module %1
+mirai.cantLoadConfig=Cannot load config for module %1, error: %2
+mirai.cantOnload=Cannot start setup for module %1, error: %2
+mirai.successLoadModule=Successfully loaded module %1
+mirai.failLoadModule=Cannot load module %1, error: %2
+mirai.finishLoadModule=Successfully loaded %1 command modules and %2 event modules
+mirai.foundPathAppstate=Found appstate file
+mirai.notFoundPathAppstate=Cannot find appstate file
+mirai.checkListGban=Checking global ban list...
+mirai.finishCheckListGban=Finished checking global ban list
+mirai.handleListenError=handleListener encountered an unexpected error: %1
+mirai.successConnectDatabase=Successfully connected to database!
+mirai.cantLoadEnvironment=Cannot load environment variables
+
+# Command system
+handleCommand.userBanned=You cannot use bot!\n%1\n%2
+handleCommand.threadBanned=This group cannot use bot!\n%1\n%2
+handleCommand.commandNotExist=Command '%1' does not exist!
+handleCommand.commandPrefix=Please enter a command after the prefix
+handleCommand.commandThreadBanned=This group cannot use command '%1'
+handleCommand.commandUserBanned=You cannot use command '%1'
+handleCommand.threadNotAllowNSFW=This group does not allow NSFW commands
+handleCommand.cantGetInfoThread=Cannot get group info, error: %1
+handleCommand.permissionNotEnough=You don't have permission to use command '%1'
+handleCommand.cantSetMessageReaction=Unexpected error in handleMessageReaction
+handleCommand.executeCommand=【%1】Command used: %2 by user %3
+handleCommand.commandError=Unexpected error executing command %1
+
+# Other
+handleCreateDatabase.newThread=New group: %1
+handleCreateDatabase.newUser=New user %1

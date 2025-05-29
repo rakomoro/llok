@@ -1,0 +1,103 @@
+
+# mirai.js
+
+mirai.errorFormat=مشكلة في تنسيق %1 في الملف %2
+mirai.nameExist=%1 موجود بالفعل!
+mirai.notFoundLanguage=اللغة %1 غير موجودة!
+mirai.notFoundPackage=لا يمكن العثور على الحزمة %1 لتثبيتها
+mirai.cantInstallPackage=لا يمكن تثبيت الحزمة %1
+mirai.loadedPackage=تم تثبيت الحزمة %1 بنجاح
+mirai.loadedConfig=تم تحميل الإعداد %1 بنجاح
+mirai.cantLoadConfig=لا يمكن تحميل الإعداد %1
+mirai.cantOnload=لا يمكن تحميل وظيفة onLoad في %1
+mirai.successLoadModule=تم تحميل الوحدة %1 بنجاح
+mirai.failLoadModule=لا يمكن تحميل الوحدة %1
+mirai.finishLoadModule=تم تحميل %1 وحدة و %2 حدث بنجاح
+mirai.foundPathAppstate=تم العثور على ملف appstate
+mirai.notFoundPathAppstate=لا يمكن العثور على ملف appstate
+mirai.checkListGban=فحص قائمة الحظر العالمي...
+mirai.banDevice=تم حظر جهازك من استخدام البوت
+mirai.keyNotSameFormat=تنسيق غير صحيح
+mirai.codeInputExpired=رمز التفعيل غير صالح
+mirai.unbanDeviceSuccess=تم إلغاء حظر جهازك بنجاح
+mirai.userBanned=تم حظرك من استخدام البوت
+mirai.userUnbanned=تم إلغاء حظرك بنجاح
+mirai.finishCheckListGban=فحص قائمة الحظر العالمي
+mirai.handleListenError=handleListen خطأ في
+mirai.warningSourceCode=اكتشاف تغيير في الكود المصدري
+mirai.refreshListen=تم تحديث handleListen...
+mirai.successConnectDatabase=Successfully connected to database!
+mirai.failConnectDatabase=فشل الاتصال بقاعدة البيانات
+
+# includes/listen.js
+
+listen.startLoadEnvironment=بدء تحميل متغيرات البيئة...
+listen.loadedEnvironmentThread=تم تحميل بيانات المجموعة بنجاح
+listen.loadedEnvironmentUser=تم تحميل بيانات المستخدم بنجاح
+listen.successLoadEnvironment=تم تحميل متغيرات البيئة بنجاح
+listen.failLoadEnvironment=فشل تحميل متغيرات البيئة %1
+
+# includes/controller/currencies.js
+
+currencies.needNumber=يجب أن يكون المبلغ رقماً
+
+# includes/controller/threads.js
+
+threads.cantFindThread=لا يمكن العثور على المجموعة
+threads.cantCreateThread=لا يمكن إنشاء بيانات المجموعة
+
+# includes/controller/users.js
+
+users.cantFindUser=لا يمكن العثور على المستخدم
+users.cantCreateUser=لا يمكن إنشاء بيانات المستخدم
+
+# includes/handle/handleCommand.js
+
+handleCommand.userBanned=لا يمكنك استخدام البوت!\n%1\n%2
+handleCommand.threadBanned=لا يمكن استخدام البوت في هذه المجموعة!\n%1\n%2
+handleCommand.commandNotExist=الأمر الذي طلبته غير موجود
+handleCommand.commandThreadBanned=لا يمكن استخدام الأمر "%1" في هذه المجموعة
+handleCommand.commandUserBanned=لا يمكنك استخدام الأمر "%1"
+handleCommand.threadNotAllowNSFW=مجموعتك لا تسمح باستخدام أوامر NSFW
+handleCommand.cantGetInfoThread=لا يمكن الحصول على معلومات المجموعة، خطأ: %1
+handleCommand.permissionNotEnough=ليس لديك صلاحية كافية لاستخدام الأمر "%1"
+handleCommand.cantSetMessageReaction=حدث خطأ غير متوقع في setMessageReaction, خطأ: %1
+handleCommand.executeCommand=[ %1 ] الأمر المستخدم: %2 بواسطة %3 في المجموعة: %4 | المعطيات: %5 | وقت المعالجة: %6ms
+handleCommand.commandPrefix=يرجى استخدام بادئة الأمر للتفاعل مع البوت
+handleCommand.emptyCommand=يرجى إدخال أمر بعد البادئة
+handleCommand.commandError=حدث خطأ غير متوقع عند استخدام الأمر %1, خطأ: %2
+
+# includes/handle/handleCommandEvent.js
+
+handleCommandEvent.moduleError=حدث خطأ غير متوقع في وحدة %1, خطأ: %2
+
+# includes/handle/handleCreateDatabase.js
+
+handleCreateDatabase.newThread=مجموعة جديدة: %1
+handleCreateDatabase.newUser=مستخدم جديد: %1
+
+# includes/handle/handleEvent.js
+
+handleEvent.executeEvent=[ %1 ] تم تنفيذ الحدث: %2 في المجموعة: %3 | وقت المعالجة: %4ms
+handleEvent.eventError=حدث خطأ غير متوقع في %1, خطأ: %12
+
+# includes/handle/handleReaction.js
+
+handleReaction.missingValue=قيمة مفقودة
+handleReaction.executeError=حدث خطأ غير متوقع في onReaction, خطأ: %1
+
+# includes/handle/handleReply.js
+
+handleReply.missingValue=قيمة مفقودة
+handleReply.executeError=حدث خطأ غير متوقع في onReply, خطأ: %1
+
+# includes/handle/handleSchedule.js
+
+handleSchedule.exectuteError=حدث خطأ في %1, خطأ: %2
+
+# utils/log.js
+
+log.infoEnviroment=الإصدار %1 - تم التحديث في %2
+log.infoFile=%1 - خط %2 - %3
+log.infoCommand=الأمر %1
+log.infoEvent=الحدث %1

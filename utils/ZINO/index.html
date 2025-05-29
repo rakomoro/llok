@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZINO X MOHAMED</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            transition: background 0.5s;
+        }
+        .title {
+            font-size: 50px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff;
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px currentColor;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">ZINO X MOHAMED</h1>
+    <script>
+        function getRandomColor() {
+            const colors = [
+                ['#ff6b6b', '#4ecdc4'],
+                ['#a8e6cf', '#ff8b94'],
+                ['#6c5ce7', '#a8e6cf'],
+                ['#e056fd', '#686de0'],
+                ['#ff9ff3', '#00d2d3']
+            ];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+        
+        function updateColors() {
+            const [color1, color2] = getRandomColor();
+            document.body.style.background = `linear-gradient(45deg, ${color1}, ${color2})`;
+            document.querySelector('.title').style.color = color2;
+        }
+        
+        updateColors();
+        setInterval(updateColors, 5000);
+    </script>
+</body>
+</html>
