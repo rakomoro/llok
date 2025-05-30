@@ -72,7 +72,7 @@ module.exports = {
 			invalidFileName: "⚠️ | Tên tệp lệnh không hợp lệ",
 			unloadedFile: "✅ | Đã unload lệnh \"%1\""
 		},
-		en: {
+		ar: {
 			missingFileName: "⚠️ | Please enter the command name you want to reload",
 			loaded: "✅ | Loaded command \"%1\" successfully",
 			loadedError: "❌ | Failed to load command \"%1\" with error\n%2: %3",
