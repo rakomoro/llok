@@ -4,7 +4,7 @@ this.config = {
     hasPermssion: 2,
     credits: "Z I N O",
     description: "اعادة تشغيل بوت",
-    commandCategory: "Admin",
+    commandCategory: "آۆآمـر آلُـمطُـۆر",
     cooldowns: 0,
     images: [],
  };
