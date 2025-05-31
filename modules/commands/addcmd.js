@@ -4,7 +4,7 @@ module.exports.config = {
   hasPermssion: 2,
   credits: "مطور البوت",
   description: "إضافة أمر جديد",
-  commandCategory: "أوامر المطور",
+  commandCategory: "آۆآمـر آلُـمطُـۆر",
   usages: ".add <اسم الأمر>.js <كود الأمر>",
   cooldowns: 5
 };
