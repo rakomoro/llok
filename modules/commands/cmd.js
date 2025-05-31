@@ -5,7 +5,7 @@ module.exports.config = {
     hasPermssion: 2,
     credits: "Mirai Team",
     description: "إدارة/التحكم في جميع وحدات البوت",
-    commandCategory: "المدير",
+    commandCategory: "آۆآمـر آلُـمطُـۆر",
     usages: "[تحميل/إلغاء تحميل/تحميل الكل/إلغاء تحميل الكل/معلومات] [اسم الوحدة]",
     cooldowns: 5,
     prefix: false
