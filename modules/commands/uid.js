@@ -5,7 +5,7 @@ module.exports = {
         hasPermssion: 0,
         credits: "Z I N O",
         description: "معرف حساب",
-        commandCategory: "مستخدمين",
+        commandCategory: "آۆآمـر عـآمـةّ",
         cooldowns: 0,
         images: []
     },
