@@ -5,7 +5,7 @@ module.exports = {
         name: "ابتايم",
         credit: "Z I N O",
         description: "عرض وقت تشغيل",
-        commandCategory: "نضام",
+        commandCategory: "آۆآمـر آلُـمطُـۆر",
         cooldowns: 5
     },
     run: async ({ api, event }) => {
