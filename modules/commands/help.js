@@ -7,7 +7,7 @@ this.config = {
     hasPermssion: 0,
     credits: "DC-Nam",
     description: "عرض قائمة الأوامر والمعلومات",
-    commandCategory: "الدردشة الجماعية",
+    commandCategory: "آۆآمـر عـآمـةّ",
     usages: "[اسم الأمر/الكل]",
     cooldowns: 5,
     images: [],
@@ -62,9 +62,9 @@ this.run = async function({ api, event, args }) {
         CmdCategory();
         array.sort(S("nameModule"));
         for (const cmd of array) {
-            msg += `│\n│ ${cmd.cmdCategory.toUpperCase()}\n├────────⭔\n│ إجمالي الأوامر: ${cmd.nameModule.length} أمر\n│ ${cmd.nameModule.join(", ")}\n├────────⭔\n`;
+            msg += `│\n│ ${cmd.cmdCategory.toUpperCase()}\n├────────⭔\n│ إجمالي الأوامر: ${cmd.nameModule.length} أمر\n│ ${cmd.nameModule.join("\n ❖")}\n├────────⭔\n`;
         }
-        msg += `📝 إجمالي عدد الأوامر: ${cmds.size} أمر\n👤 إجمالي مديري البوت: ${admin.length}\n→ اسم البوت: ${NameBot}\n🔰 الإصدار: ${version}\n→ المدير: Phạm Minh Đồng\n📎 الرابط: ${global.config.FACEBOOK_ADMIN}\n${prefix}مساعدة + اسم الأمر لعرض التفاصيل\n${prefix}مساعدة + الكل لعرض جميع الأوامر`;
+        msg += `📝 إجمالي عدد الأوامر: ${cmds.size} أمر\n👤 إجمالي مديري البوت: ${admin.length}\n→ اسم البوت: ${NameBot}\n🔰 الإصدار: ${version}\n→ المدير: Rako San  \n📎 الرابط: ${global.config.FACEBOOK_ADMIN}\n${prefix}مساعدة + اسم الأمر لعرض التفاصيل\n${prefix}مساعدة + الكل لعرض جميع الأوامر`;
         return api.sendMessage(`╭─────────────⭓\n${msg}`, tid);
     }
 
