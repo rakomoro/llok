@@ -7,7 +7,7 @@ module.exports.config = {
   hasPermission: 0,
   credits: "Z I N O",
   description: "prefix bot",
-  commandCategory: "مستخدمين",
+  commandCategory: "آۆآمـر عـآمـةّ",
   usages: "[]",
   cooldowns: 0
 };
