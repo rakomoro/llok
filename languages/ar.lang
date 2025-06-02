@@ -55,7 +55,6 @@ users.cantCreateUser=لا يمكن إنشاء بيانات المستخدم
 
 handleCommand.userBanned=لا يمكنك استخدام البوت!\n%1\n%2
 handleCommand.threadBanned=لا يمكن استخدام البوت في هذه المجموعة!\n%1\n%2
-handleCommand.commandNotExist=الأمر الذي طلبته غير موجود
 handleCommand.commandThreadBanned=لا يمكن استخدام الأمر "%1" في هذه المجموعة
 handleCommand.commandUserBanned=لا يمكنك استخدام الأمر "%1"
 handleCommand.threadNotAllowNSFW=مجموعتك لا تسمح باستخدام أوامر NSFW
@@ -63,8 +62,6 @@ handleCommand.cantGetInfoThread=لا يمكن الحصول على معلومات
 handleCommand.permissionNotEnough=ليس لديك صلاحية كافية لاستخدام الأمر "%1"
 handleCommand.cantSetMessageReaction=حدث خطأ غير متوقع في setMessageReaction, خطأ: %1
 handleCommand.executeCommand=[ %1 ] الأمر المستخدم: %2 بواسطة %3 في المجموعة: %4 | المعطيات: %5 | وقت المعالجة: %6ms
-handleCommand.commandPrefix=يرجى استخدام بادئة الأمر للتفاعل مع البوت
-handleCommand.emptyCommand=يرجى إدخال أمر بعد البادئة
 handleCommand.commandError=حدث خطأ غير متوقع عند استخدام الأمر %1, خطأ: %2
 
 # includes/handle/handleCommandEvent.js
