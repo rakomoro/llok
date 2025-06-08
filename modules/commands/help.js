@@ -1,8 +1,7 @@
-
 const axios = require('axios');
 
 this.config = {
-    name: "مساعدة",
+    name: "اوامر",
     version: "1.1.1",
     hasPermssion: 0,
     credits: "DC-Nam",
@@ -23,14 +22,18 @@ this.run = async function({ api, event, args }) {
     const NameBot = global.config.BOTNAME;
     const version = this.config.version;
     var prefix = TIDdata.PREFIX || global.config.PREFIX;
-
     if (type == "الكل" || type == "all") {
-        for (const cmd of cmds.values()) {
-            msg += `${++i}. ${cmd.config.name}\n→ الوصف: ${cmd.config.description}\n────────────────\n`;
-        }
-        return api.sendMessage(msg, tid, mid);
+    msg = `✵───── ⋆⋅☆⋅⋆ ─────✵\n`;
+    msg +=    `❏ ❪ قائمة الأوامر ❫ ❏\n`;
+    msg += `✵───── ⋆⋅☆⋅⋆ ─────✵\n`;
+    let j = 1;
+    for (const cmd of cmds.values()) {
+      msg += `✵ ${j++}: ${cmd.config.name}\n`;
+      msg += `📝 ${cmd.config.description}\n`;
+      msg += `✵───── ⋆⋅☆⋅⋆ ─────✵\n`;
     }
-
+    return api.sendMessage(msg, tid, mid);
+    }
     if (type) {
         for (const cmd of cmds.values()) {
             array.push(cmd.config.name.toString());
@@ -59,15 +62,24 @@ this.run = async function({ api, event, args }) {
         msg = `[ دليل الاستخدام ]\n─────────────────\n[📜] - اسم الأمر: ${cmd.name}\n[👤] - المؤلف: ${cmd.credits}\n[🌾] - الإصدار: ${cmd.version}\n[🌴] - الصلاحية: ${TextPr(cmd.hasPermssion)}\n[📝] - الوصف: ${cmd.description}\n[🏷️] - المجموعة: ${cmd.commandCategory}\n[🍁] - طريقة الاستخدام: ${cmd.usages}\n[⏳] - وقت الانتظار: ${cmd.cooldowns}ث\n─────────────────\n📌 دليل الاستخدام للمبتدئين`;
         return api.sendMessage({ body: msg, attachment: image }, tid, mid);
     } else {
-        CmdCategory();
-        array.sort(S("nameModule"));
-        for (const cmd of array) {
-            msg += `│\n│ ${cmd.cmdCategory.toUpperCase()}\n├────────⭔\n│ إجمالي الأوامر: ${cmd.nameModule.length} أمر\n│ ${cmd.nameModule.join("\n ❖  ")}\n├────────⭔\n`;
-        }
-        msg += `📝 إجمالي عدد الأوامر: ${cmds.size} أمر\n👤 إجمالي مديري البوت: ${admin.length}\n→ اسم البوت: ${NameBot}\n🔰 الإصدار: ${version}\n→ المدير: Rako San  \n📎 الرابط: ${global.config.FACEBOOK_ADMIN}\n${prefix}مساعدة + اسم الأمر لعرض التفاصيل\n${prefix}مساعدة + الكل لعرض جميع الأوامر`;
-        return api.sendMessage(`╭─────────────⭓\n${msg}`, tid);
+    CmdCategory();
+    array.sort(S("nameModule"));
+    msg = `✵───── ⋆⋅☆⋅⋆ ─────✵\n`;
+    msg +=    `❏ ❪ قائمة الأوامر ❫ ❏\n`;
+    msg += `✵───── ⋆⋅☆⋅⋆ ─────✵\n`;
+    for (const cmd of array) {
+      msg += `  ❲❏❳ ${cmd.cmdCategory.toUpperCase()} ❲${cmd.nameModule.length}❳:\n`;
+      cmd.nameModule.forEach(n => {
+        msg += ` ➪ :  ${n}\n`;
+      });
+      msg += `✵───── ⋆⋅☆⋅⋆ ─────✵\n`;
     }
-
+     msg += ` ❪📂❫ إجمالي عدد الأوامر: ${cmds.size} أمر\n`;
+  msg += ` ❪👤❫ إجمالي مديري البوت: ${admin.length}\n`;
+  msg += ` ❪💖❫ اسم البوت: ${NameBot}\n`;
+  msg += ` ❪✨❫ الإصدار: ${version}\n`;
+  return api.sendMessage(msg, tid, mid);
+}
     function CmdCategory() {
         for (const cmd of cmds.values()) {
             const {
