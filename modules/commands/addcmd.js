@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: "add",
+  name: "اضف",
   version: "1.0",
   hasPermssion: 2,
   credits: "مطور البوت",
