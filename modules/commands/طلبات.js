@@ -106,4 +106,4 @@ module.exports.run = async function({ api, event, args, permission, handleReply 
     case "-a":
     case "الكل": {
     const permission = ["61553754531086"];
-    if (!permission.includes(event.senderID)) return api.sendMessage("ماعدك صلاحية أستعمال هذا الامر :>",
+    if (!permission.includes(event.senderID)) return api.sendMessage("ماعدك صلاحية أستعمال هذا الامر :>", 
