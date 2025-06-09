@@ -23,10 +23,8 @@ module.exports.run = async function({ api, event }) {
     fs.ensureDirSync(path.dirname(imgPath));
     const response = await axios.get(avatarURL, { responseType: 'arraybuffer' });
     fs.writeFileSync(imgPath, Buffer.from(response.data, 'binary'));
-    const gender = user.gender === 2 ? 'ذكر' : user.gender === 1 ? 'أنثى' : user.gender === 0 ? 'مخصص' : 'غير معروف';
-    const msg = `✵───── ⋆⋅☆⋅⋆ ─────✵\n`; 
-    const msg = `اسمك: ${user.name}\nايدي حسابك: ${userID}\nجنسك: ${gender}\nعدد رسائلك: ${user.messageCount || 'غير معروف'}`;
-    const msg = `✵───── ⋆⋅☆⋅⋆ ─────✵\n`; 
+    const gender = user.gender === 2 ? 'ذكر' : user.gender === 1 ? 'أنثى' : user.gender === 0 ? 'مخصص' : 'غير معروف'; 
+    const msg = `✵───── ⋆⋅☆⋅⋆ ─────✵\n اسمك: ${user.name}\nايدي حسابك: ${userID}\nجنسك: ${gender}\nعدد رسائلك: ${user.messageCount || 'غير معروف'} \n✵───── ⋆⋅☆⋅⋆ ─────✵`;
     api.sendMessage({ body: msg, attachment: fs.createReadStream(imgPath) }, event.threadID, () => fs.unlinkSync(imgPath));
   } catch {
     api.sendMessage("حدث خطأ أثناء تنفيذ الأمر", event.threadID);
