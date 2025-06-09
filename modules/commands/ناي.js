@@ -1,4 +1,3 @@
-Enter
 module.exports.config = {
     name: "ناي",
     version: "1.0.0",
