@@ -1,6 +1,4 @@
 const axios = require('axios');
-const fs = require('fs');
-const replies = require('./replies.json');
 
 module.exports = {
   config: {
@@ -16,25 +14,43 @@ module.exports = {
   run: async function({ api, event, args }) {
     const msg = args.join(" ");
     let reply = "";
-    for (const key in replies.replies) {
-      if (msg.includes(key)) {
-        reply = replies.replies[key][Math.floor(Math.random() * replies.replies[key].length)];
-        break;
+
+    try {
+      const response = await axios.get(`https://rapido.zetsu.xyz/api/gemini?chat=${encodeURIComponent(msg)}`);
+      reply = response.data.response;
+
+      // تعديل الرد من الAPI بشكل قاصف
+      if (isStupidQuestion(msg)) {
+        reply = `اوه يالك من غبي، ${reply} 😒`;
+      } else if (isLoveQuestion(msg)) {
+        reply = ` لا أستطيع أن أبادلك المشاعر، أنا بوت فقط + ما تنسى انا 🦅، ${reply} 🐸`;
+      } else if (isViolentQuestion(msg)) {
+        reply = `أنت مجنون؟ لا أستطيع أن أساعدك في هذا، ${reply} 😠`;
+      } else {
+        reply = `نازي هنا لمساعدتك، ${reply} 🤔`;
       }
+    } catch (error) {
+      reply = "لم أفهم قصدك 🙂💔";
     }
-    if (!reply) {
-      const words = msg.split(" ");
-      for (const word of words) {
-        for (const key in replies.replies) {
-          if (key.includes(word) || word.includes(key)) {
-            reply = replies.replies[key][Math.floor(Math.random() * replies.replies[key].length)];
-            break;
-          }
-        }
-        if (reply) break;
-      }
-    }
-    if (!reply) reply = "لم أفهم قصدك 🙂💔";
+
     return api.sendMessage(reply, event.threadID);
   }
 };
+
+// دالة للتحقق من الأسئلة الغبية
+function isStupidQuestion(text) {
+  const stupidQuestions = ['تاكل', 'تشرب', 'تحب', 'تبوس', 'اضرب', 'هات فلوس'];
+  return stupidQuestions.some(question => text.includes(question));
+}
+
+// دالة للتحقق من الأسئلة الرومانسية
+function isLoveQuestion(text) {
+  const loveQuestions = ['احبك', 'بحبك', 'في حبك'];
+  return loveQuestions.some(question => text.includes(question));
+}
+
+// دالة للتحقق من الأسئلة العنيفة
+function isViolentQuestion(text) {
+  const violentQuestions = ['اقصف', 'اضرب', 'اقتل', 'اهدم'];
+  return violentQuestions.some(question => text.includes(question));
+        }
