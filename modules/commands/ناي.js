@@ -18,7 +18,7 @@ module.exports.run = async function({ api, event, args }) {
     const content = encodeURIComponent(args.join(" "));
     if (!args[0]) return api.sendMessage("ماذا تريد 🐸؟ ", tid, mid);
     try {
-        const res = await axios.get(`https://rapido.zetsu.xyz/api/gemini?chat=${encodeURIComponent(msg)}`);
+         const res = await axios.get(`https://rapido.zetsu.xyz/api/gemini?chat=${encodeURIComponent(content)} `);
 
         if (res.data.error) {
             api.sendMessage(`Error: ${res.data.error}`, tid, (error, info) => {
