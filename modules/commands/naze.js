@@ -30,7 +30,7 @@ module.exports = {
         reply = `نازي هنا لمساعدتك، ${reply} 🤔`;
       }
     } catch (error) {
-      reply = "لم أفهم قصدك 🙂💔";
+      reply = "داير شنو يا  دنقل ԅ(¯﹃¯ԅ) ";
     }
 
     return api.sendMessage(reply, event.threadID);
