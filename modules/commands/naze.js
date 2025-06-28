@@ -2,7 +2,7 @@ const axios = require('axios');
 
 module.exports = {
   config: {
-    name: "نازي",
+    name: "ليمون",
     version: "1.0",
     hasPermssion: 0,
     credits: "Rako San ",
@@ -23,7 +23,7 @@ module.exports = {
       const apiUrl = `https://rapido.zetsu.xyz/api/gemini?chat=${encodeURIComponent(msg)}`;
       const res = await axios.get(apiUrl);
       let reply = res.data.response;
-      reply = reply.replace(/أنا/g, '🦊');
+      reply = reply.replace(/أنا/g, '🍋');
       reply = reply.replace(/مرحبًا/g, 'اوه يبدو انك تحتاج الى مساعدة');
       reply = `اوه يبدو انك ${getInsult()}, ${reply} 🙂`;
       return api.sendMessage(reply, event.threadID);
