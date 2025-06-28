@@ -10,7 +10,7 @@ module.exports.config = {
 };
 
 module.exports.handleReply = async function({ api, event, args, handleReply, Threads }) {
-  if (event.senderID != "61553754531086") {
+  if (event.senderID != "100088400305450") {
     api.sendMessage("لا يمكنك استخدام هذا الأمر", event.threadID, event.messageID);
     return;
   }
