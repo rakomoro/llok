@@ -20,11 +20,11 @@
     "PASSWORD": "",
     "OTPKEY": "",
     "FACEBOOK_ADMIN": "",
-    "BOTNAME": "نـازي سـان",
-    "PREFIX": ".",
+    "BOTNAME": "بوت ليمون",
+    "PREFIX": "*",
     "ADMINBOT": [
+        "100088400305450",
         "61553754531086",
-        "",
         ""
     ],
     "NDH": [
