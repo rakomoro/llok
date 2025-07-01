@@ -15,7 +15,7 @@ module.exports = {
     const msg = args.join(" ");
 
     // الردود المحلية على الأسئلة الشائعة
-    if (!msg || msg === '') return api.sendMessage("مرحبًا! كيف يمكنني مساعدتك؟ 🙂", event.threadID);
+    if (!msg || msg === '') return api.sendMessage("مبشر عمك (. ❛ ᴗ ❛.) ", event.threadID);
     if (msg.includes('كيفك') || msg.includes('كيف حالك')) return api.sendMessage("تمام، أنا بخير. شكرًا على السؤال! 🙂", event.threadID);
     if (msg.includes('من أنت')) return api.sendMessage("أنا بوت، مصمم لمساعدتك في الحصول على المعلومات. 🙂", event.threadID);
 
